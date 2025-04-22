@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Botique</title>
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <h1>Bean Botique</h1>
+    <div id="hamburger"class="hamburger" onclick="toggleMenu()">
+        <i class="bx bx-menu"></i>
+    </div>
+    
+
+
+    <nav>
+        <ul class="nav_links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="homebanner">
+    <div class="homecontainer" id="blur">
+        <div class="home">
+            <h1 class="Welcome"> Welcome To Bean Botique!</h1>
+            <p class="hometext">
+                Welcome to Bean Boutique, where every brew tells a story. Immerse yourself in the world of premium coffee, curated flavors, and unforgettable aromas. Your perfect cup awaits—sip, savor and smile!
+            </p>
+            <a class="popupbtn" href="#" onclick="toggle()">Sign Up</a>
+        </div>
+    </div>
+
+    <div id="popup">
+        <h2>Sign Up</h2>
+        <form action="#">
+            <input type="text" placeholder="Enter Email">
+            <input type="password" placeholder="Enter password">
+            <div class="btngp">
+                <button type="submit" class="popupformbtn">Submit</button>
+                <button type="button" class="popupformbtn" onclick="toggle()">Close</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="video-container">
+    <div class="video">
+    <video controls>
+        <source src="./video/brewing video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    </div>
+    <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122216.66463173031!2d96.
+        00466464335939!3d16.812918200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c193cb8ee594f5%3A0xdb67a651d498d4f!
+        2sOrigin%20Coffee%20%26%20Roastery!5e0!3m2!1sen!2smm!4v1742801554455!5m2!1sen!2smm" width="600" height="450" style="border:0;"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+
+    <footer>
+        <p class="footer-title">Follow Us On</p>
+        <div class="social-icons">
+        <a href="#" class="social-link youtube">
+            <i class='bx bxl-youtube'></i>
+            <span>YouTube</span>
+        </a>
+        <a href="#" class="social-link instagram">
+            <i class='bx bxl-instagram'></i>
+            <span>Instagram</span>
+        </a>
+        <a href="#" class="social-link discord">
+            <i class='bx bxl-discord-alt'></i>
+            <span>Discord</span>
+        </a>
+        </div>
+        <p class="copyright">© 2025 Bean Botique Coffee Shop. All Rights Reserved.</p>
+    </footer>
+    
+
+
+<script>
+    function toggle() {
+        document.getElementById('popup').classList.toggle('active');
+        document.getElementById('blur').classList.toggle('active');
+    }
+    $(document).ready(function(){
+        $(".dropdown").hover(function(){
+            $(this).find(".dropdown-content").stop(true, true).slideDown(200);
+        }, function(){
+            $(this).find(".dropdown-content").stop(true, true).slideUp(200);
+        });
+    });
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav_links');
+        const icon = document.querySelector('#hamburger i');
+    
+        navLinks.classList.toggle('show');
+    
+        if (navLinks.classList.contains('show')) {
+            icon.className = 'bx bx-x'; // cross icon
+        } else {
+            icon.className = 'bx bx-menu'; // menu icon
+        }
+    }
+    
+    
+    
+    
+    
+</script>
+
+</body>
+</html>

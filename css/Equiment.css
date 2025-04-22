@@ -1,0 +1,243 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(90deg, #871B00 0%, #755E00 50%, rgba(117, 94, 0, 0.99) 100%);
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #4b2e2e;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(90deg, #946565 0%, #C27C04 50%, rgba(255, 42, 0, 0.94) 100%);
+    color: #ffffff;
+    position: relative;
+}
+
+.header h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #ffffff;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1100;
+    background: transparent;
+    border: none;
+}
+
+.nav_links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav_links li a {
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav_links li a:hover {
+    color: #ffa07a;
+}
+
+/* Responsive Nav - Toggle Support */
+@media (max-width: 768px) {
+    .nav_links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 15px;
+        background-color: #946565;
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+
+    .nav_links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Section */
+.container {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+#brewing-equipment h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+#brewing-equipment p {
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+/* Search Box */
+.searchbox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+.box input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.box i {
+    font-size: 20px;
+    color: #6f4e37;
+    cursor: pointer;
+}
+
+/* Product Grid */
+.product {
+    display: inline-block;
+    width: 280px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    vertical-align: top;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product h3 {
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+.product .price {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.product .description {
+    font-size: 0.95em;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.buy-button {
+    padding: 10px 20px;
+    background-color: #ab4700;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #a0522d;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #404040 0%, #422424 50%, rgba(0, 0, 0, 0.94) 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.footer-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link i {
+    font-size: 28px;
+}
+
+/* Gradient Text Effects */
+.social-link.youtube i,
+.social-link.youtube span {
+    background: linear-gradient(45deg, #FF0000, #b21f1f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.social-link.instagram i,
+.social-link.instagram span {
+    background: linear-gradient(45deg, #9B4F96, #F56040, #F9A9A2, #F8D4B2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.social-link.discord i,
+.social-link.discord span {
+    background: linear-gradient(45deg, #5865F2, #404EED);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
